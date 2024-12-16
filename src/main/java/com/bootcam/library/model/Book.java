@@ -8,31 +8,37 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
+    private String titulo;
+    private String autores;
+    private int isbn;
+    private String generosLiterarios;
     private String description;
 
-    public Book(String name, String description) {
-        this.name = name;
+    public Book(String titulo, String autores, int isbn, String generosLiterarios,  String description ) {
+        this.titulo = titulo;
+        this.autores = autores;
+        this.isbn = isbn;
+        this.generosLiterarios = generosLiterarios;
         this.description = description;
     }
 
     public Book() {
     }
 
-    public int getId() {
-        return id;
+    public String getGenerosLiterarios() {
+        return generosLiterarios;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setGenerosLiterarios(String generosLiterarios) {
+        this.generosLiterarios = generosLiterarios;
     }
 
-    public String getName() {
-        return name;
+    public int getIsbn() {
+        return isbn;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
     }
 
     public String getDescription() {
@@ -41,5 +47,29 @@ public class Book {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getAutores() {
+        return autores;
+    }
+
+    public void setAutores(String autores) {
+        this.autores = autores;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
