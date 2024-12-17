@@ -2,10 +2,7 @@ package com.bootcam.library.controller;
 
 import com.bootcam.library.model.Book;
 import com.bootcam.library.service.BookService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,8 +19,14 @@ public class BookController {
     public List<Book> getAllBooks() {
         return bookService.getAll();
     }
+
     @PostMapping("/books")
     public void createBook(@RequestBody Book newBook) {
         bookService.addBook(newBook);
+    }
+
+    @DeleteMapping("/books/{id}")
+    public void deleteBookById(@PathVariable int id) {
+        bookService.deleteBook(id);
     }
 }

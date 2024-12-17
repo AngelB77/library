@@ -10,11 +10,11 @@ public class Book {
     private int id;
     private String titulo;
     private String autores;
-    private int isbn;
+    private String isbn;
     private String generosLiterarios;
     private String description;
 
-    public Book(String titulo, String autores, int isbn, String generosLiterarios,  String description ) {
+    public Book(String titulo, String autores, String isbn, String generosLiterarios,  String description ) {
         this.titulo = titulo;
         this.autores = autores;
         this.isbn = isbn;
@@ -22,8 +22,7 @@ public class Book {
         this.description = description;
     }
 
-    public Book() {
-    }
+    public Book() {}
 
     public String getGenerosLiterarios() {
         return generosLiterarios;
@@ -33,11 +32,11 @@ public class Book {
         this.generosLiterarios = generosLiterarios;
     }
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
